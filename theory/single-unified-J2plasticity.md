@@ -115,11 +115,10 @@ $$
 defines the effective diffusivity
 
 $$
-\boxed{
-D_{\text{eff}} = h(\eta_0)\,D_{\text{Na}}
-+ (1-h(\eta_0))\big[\phi_{g,\text{eff}}D_{\text{bulk}}
-+ (1-\phi_{g,\text{eff}})D_{gb}\big]
-}
+D_{\mathrm{eff}}
+= h(\eta_0)\,D_{\mathrm{Na}}
++ \big(1 - h(\eta_0)\big)\Big[\phi_{g,\mathrm{eff}}\,D_{\mathrm{bulk}}
++ \big(1 - \phi_{g,\mathrm{eff}}\big)\,D_{gb}\Big]
 $$
 
 with
