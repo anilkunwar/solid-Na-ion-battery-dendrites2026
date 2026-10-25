@@ -18,4 +18,9 @@ However, in the context of this specific spectral phase-field code, J2 is used a
 
 [![continuummodelnt2d](https://img.shields.io/badge/onevar3-streamlit-blue)](https://sodium-dendrites-in-solid-state-battery3.streamlit.app/) ( Now, all grains within electrode or electrolyte  are represented by a MPF order parameters)
 
+## r4: a single set of VAR for the entire grains within the two  phase states (electrode and electrolyte). the MPF order parameters are represented by the name "ETA"
+
+[![continuummodelnt2d](https://img.shields.io/badge/onevar4-streamlit-blue)](https://sodium-dendrites-in-solid-state-battery4.streamlit.app/) ( Now, all grains within electrode or electrolyte  are represented by a MPF order parameters, Temperature slider to model realistic temperature conditions e.g. 60 degree centigrade for PEO electrolyte)
+
+
 
