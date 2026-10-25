@@ -8,3 +8,8 @@
 
 [![continuummodelnt2d](https://img.shields.io/badge/onevar2-streamlit-turquoise)](https://sodium-dendrites-in-solid-state-battery2.streamlit.app/) ( Now, all grains within electrode or electrolyte  are represented by a MPF order parameters)
 
+## r3: a single set of VAR for the entire grains within the two  phase states (electrode and electrolyte). the MPF order parameters are represented by the name "ETA"
+
+[![continuummodelnt2d](https://img.shields.io/badge/onevar3-streamlit-blue)](https://sodium-dendrites-in-solid-state-battery3.streamlit.app/) ( Now, all grains within electrode or electrolyte  are represented by a MPF order parameters)
+
+
