@@ -24,6 +24,14 @@ J2 (von Mises) Flow Rule : J2 perfectly captures metal dislocation glide and cre
 
 [![continuummodelnt2d](https://img.shields.io/badge/onevar4-streamlit-blue)](https://sodium-dendrites-in-solid-state-battery4.streamlit.app/) ( Now, all grains within electrode or electrolyte  are represented by a MPF order parameters, Temperature slider to model realistic temperature conditions e.g. 60 degree centigrade for PEO electrolyte)
 
+[![continuummodelnt2d](https://img.shields.io/badge/onevar4a-streamlit-blue)](https://sodium-dendrites-in-solid-state-battery4a.streamlit.app/) (Code 4a)
+
+[![continuummodelnt2d](https://img.shields.io/badge/onevar4b-streamlit-blue)](https://sodium-dendrites-in-solid-state-battery4b.streamlit.app/) (Code 4b)
+
+[![continuummodelnt2d](https://img.shields.io/badge/onevar4c-streamlit-blue)](https://sodium-dendrites-in-solid-state-battery4c.streamlit.app/) (Code 4c)
+
+[![continuummodelnt2d](https://img.shields.io/badge/onevar4d-streamlit-blue)](https://sodium-dendrites-in-solid-state-battery4a.streamlit.app/) (Code 4d)
+
 ## r5: Branch-Free Unified Viscoplasticity (J2 plasticity behavior in Sodium Metal and Eyring Viscoplasticity in Polymer Electrolyte)
 
 [![continuummodelnt2d](https://img.shields.io/badge/onevar5-streamlit-red)](https://sodium-dendrites-in-solid-state-battery5.streamlit.app/) ( Now, all grains within electrode or electrolyte  are represented by a MPF order parameters, Temperature slider to model realistic temperature conditions e.g. 60 degree centigrade for PEO electrolyte)
