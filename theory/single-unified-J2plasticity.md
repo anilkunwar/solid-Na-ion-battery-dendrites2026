@@ -117,8 +117,9 @@ defines the effective diffusivity
 $$
 D_{\mathrm{eff}}
 = h(\eta_0)\,D_{\mathrm{Na}}
-+ \big(1 - h(\eta_0)\big)\Big[\phi_{g,\mathrm{eff}}\,D_{\mathrm{bulk}}
-+ \big(1 - \phi_{g,\mathrm{eff}}\big)\,D_{gb}\Big]
++ \bigl(1 - h(\eta_0)\bigr)
+  \Bigl[\phi_{g,\mathrm{eff}}\,D_{\mathrm{bulk}}
+  + \bigl(1 - \phi_{g,\mathrm{eff}}\bigr)\,D_{gb}\Bigr]
 $$
 
 with
