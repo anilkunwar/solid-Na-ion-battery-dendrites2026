@@ -208,9 +208,11 @@ with $k^{2}\to\varepsilon$ at the DC mode. The elastic solve returns strains and
 ### 7.3 Eigenstrain from Na insertion
 
 $$
-\varepsilon^{*}_{xx}=\varepsilon^{*}_{yy}=\beta\,\eta_0,
+\varepsilon^{\mathrm{eig}}_{xx}
+= \varepsilon^{\mathrm{eig}}_{yy}
+= \beta\cdot\eta_{0},
 \qquad
-\varepsilon^{*}_{xy}=0,
+\varepsilon^{\mathrm{eig}}_{xy} = 0,
 $$
 
 with misfit parameter $\beta$ (0.30 for Na metal, 0.10 for PEO, 0.20 for Na₃SbS₄, 0.15 for NASICON). This is the **volume swelling** caused by Na incorporation — the driver of the whole mechanical problem, present in every phase.
@@ -218,7 +220,10 @@ with misfit parameter $\beta$ (0.30 for Na metal, 0.10 for PEO, 0.20 for Na₃Sb
 The total strain entering the elastic solve is
 
 $$
-\varepsilon^{\text{tot}}_{ij} = \varepsilon^{\text{el}}_{ij} + \varepsilon^{*}_{ij} + \varepsilon^{p}_{ij},
+\varepsilon^{\mathrm{tot}}_{ij}
+= \varepsilon^{\mathrm{el}}_{ij}
++ \varepsilon^{\mathrm{eig}}_{ij}
++ \varepsilon^{\mathrm{p}}_{ij},
 $$
 
 so the accumulated plastic strain from previous steps is retained and consistently added.
@@ -238,7 +243,9 @@ $\sigma_h$ is fed back into the stress-migration term of the MPF (§2.1); $\sigm
 The local grain size is reconstructed from the phase-field grain indicator via its spectral gradient,
 
 $$
-h(\mathbf{x}) = \operatorname{clip}\!\Big(\frac{2}{|\nabla\phi_g|+\varepsilon},\; 0,\; 300\,\mu\text{m}\Big),
+h(\mathbf{x})
+= \min\!\Big(300\,\mu\mathrm{m},\;
+        \max\!\big(0,\; \tfrac{2}{|\nabla\phi_g|+\varepsilon}\big)\Big),
 $$
 
 and floored at $h \ge 2.001\,b$ for numerical stability. This is the only place where the MPF state explicitly feeds the plasticity module — but it is applied **everywhere**, in Na and SE alike. In the Na electrode $\phi_g \approx 1$ uniformly, so $h \to h_{\max}$ and the Hall–Petch contribution is small; in SE grains $\phi_g$ varies from 1 (interior) to 0 (GB), so $h$ varies smoothly across the microstructure.
@@ -276,7 +283,7 @@ $$
 $$
 
 $$
-d_{\text{inc}} = \min\!\Big(\tfrac23\dot\gamma\,\Delta t,\; 10^{-3}\Big).
+d_{\mathrm{inc}} = \min\!\Big(\tfrac23\,\dot\gamma\,\Delta t,\; 10^{-3}\Big).
 $$
 
 This is a **fixed-direction (Radial-Return-like) J2 update**: the plastic strain rate is taken along the constant deviatoric direction implied by plane-strain proportional loading. Because the update is volumetric-neutral (trace-free) and always deviatoric-positive, it is valid for both metals and for the (idealised) pressure-insensitive J2 response assumed for the SE phases here. The accumulated plastic strains $\varepsilon^{p}_{ij}$ are clipped to $[-0.1, 0.1]$.
@@ -293,7 +300,7 @@ A geometrically-necessary-dislocation (GND) density proxy is computed from the g
 
 $$
 \rho_{GND}
-= \frac{|\nabla\varepsilon^{\text{tot}}_{xy}|}{\max|\nabla\varepsilon^{\text{tot}}_{xy}|}
+= \frac{|\nabla\varepsilon^{\mathrm{tot}}_{xy}|}{\max|\nabla\varepsilon^{\mathrm{tot}}_{xy}|}
 \;\cdot\;\big(0.5 + 0.5\,\phi_{gb}\big),
 $$
 
@@ -345,7 +352,7 @@ The BV prefactor $F/RT$ uses the operating temperature directly. Recommended ope
 |---|---|
 | $\partial/\partial x$, $\partial/\partial y$, $\nabla^{2}$, $\nabla\cdot$ | FFT (spectral) |
 | Time integration | Explicit Euler with per-step clipping |
-| CFL on diffusion | Auto-substep: $n_{\text{sub}} = \lceil \Delta t / (0.2\,\Delta x^{2}/D_{\max})\rceil$ |
+| CFL on diffusion | Auto-substep: $n_{\mathrm{sub}} = \lceil \Delta t / (0.2\,\Delta x^{2}/D_{\max})\rceil$ |
 | GB smoothing | Gaussian filter, $\sigma = 2\,w_{gb}/\Delta x$ |
 | MPF constraint | Lagrange renormalisation $\sum_i\eta_i = 1$ |
 | Elasticity | Precomputed FFT Green's function (one-time cost) |
