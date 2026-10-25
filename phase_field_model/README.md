@@ -5,6 +5,8 @@
 J2 plasticity is unsuitable for polymers because it ignores pressure-dependence, volume changes, and viscoelasticity.
 However, in the context of this specific spectral phase-field code, J2 is used as a computational necessity. It provides a mathematically elegant, computationally cheap way to regularize infinite stress singularities at the dendrite tip and acts as a phenomenological proxy for local polymer creep/stress-relaxation, allowing the FFT solver to run efficiently while still capturing the primary physics of dendrite propagation along grain boundaries.
 
+J2 (von Mises) Flow Rule : J2 perfectly captures metal dislocation glide and creep. It ignores hydrostatic pressure, and this does not produce error for metals.
+
 
 ## r1: VAR1 for phase states and VAR2 for grains within electrolyte
 
