@@ -1314,7 +1314,7 @@ class NaSSBSolver:
         # Wetting enhancement: boosts BV source at Na/SE interface where
         # dynamic GB indicator is high (drives preferential GB propagation).
         #self.wetting_factor = float(params.get('wetting_factor', 1.0))
-        self.wetting_factor = float(params.get('wetting_factor', 5.0))
+        self.wetting_factor = float(params.get('wetting_factor', 2.0))
 
         # Applied voltage (single plating direction) — must be set before
         # _init_potential() is called.
