@@ -38,7 +38,7 @@ J2 (von Mises) Flow Rule : J2 perfectly captures metal dislocation glide and cre
 
 ## r6: Branch-Free Unified Viscoplasticity (J2 plasticity behavior in Sodium Metal and Eyring Viscoplasticity in Polymer Electrolyte)
 
-[![continuummodelnt2d](https://img.shields.io/badge/onevar6-streamlit-red)](https://sodium-dendrites-in-solid-state-battery6.streamlit.app/) ( Now, all grains within electrode or electrolyte  are represented by a MPF order parameters, Temperature slider to model realistic temperature conditions e.g. 60 degree centigrade for PEO electrolyte)
+[![continuummodelnt2d](https://img.shields.io/badge/onevar6-streamlit-red)](https://sodium-dendrites-in-solid-state-battery6.streamlit.app/) (The Code Successfully Implements the Branch-Free Unified Viscoplasticity,   All grains within electrode or electrolyte  are represented by a MPF order parameters, Temperature slider to model realistic temperature conditions e.g. 60 degree centigrade for PEO electrolyte)
 
 
 
